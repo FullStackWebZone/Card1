@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+html
+{
+	font-size: 62.5%;
+}
+*
+{
+	margin: 0;
+	padding: 0;	
+	font-family: 'Poppins', sans-serif;
+	/*overflow: hidden; */
+}
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #131313; 
+}
+.container
+{
+	position: relative;
+	/*display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 120rem;
+	transform-style: preserve-3d;*/
+}
+.container .card
+{
+	position: relative;
+	width: 32rem;
+	height: 45rem;
+	background: #232323;
+	border-radius: 2rem;
+	overflow: hidden; 
+}
+.container .card:before
+{
+	content: '';
+	position: absolute;
+	top :0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #9bdc28;
+	clip-path: circle(15rem at 80% 20%);
+	transition: 0.5s ease-in-out;
+}
+.container .card:hover:before
+{
+	clip-path: circle(30rem at 80% -20%);
+}
+
+.container .card:after
+{
+	content: 'NIKE';
+	position: absolute;
+	top : 50%;
+	left: 6%;
+	font-size: 12em;
+	font-weight: 800;
+	font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+.container .card .imgBx
+{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10000;
+	width: 100%;
+	height: 22rem;
+	transition: 0.5s;
+}
+.container .card:hover .imgBx
+{
+	top: 0;
+	transform: translateY(0%);
+}
+.container .card .imgBx img
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-25deg);
+	width: 27rem;
+}
+.container .card .contentBx
+{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10rem;
+	text-align: center;
+	transition: 1s;
+	z-index: 10;
+}
+.container .card:hover .contentBx
+{
+	height: 21rem;
+}
+.container .card .contentBx h2
+{
+	position: relative;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	color: #fff;
+}
+.container .card .contentBx .size,
+.container .card .contentBx .color
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.8rem 2rem;
+	transition: 0.5s;
+	opacity: 0;
+	visibility: hidden;
+}
+.container .card:hover .contentBx .color
+{
+    opacity: 1;
+	visibility: visible;
+	transition-delay: 0.6s;
+}
+.container .card:hover .contentBx .size
+{
+    opacity: 1;
+	visibility: visible;
+	transition-delay: 0.5s;
+}
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3
+{
+	color: #fff;
+	font-weight: 300;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	margin-right: 1rem;
+}
+.container .card .contentBx .size span
+{
+	width: 2.6rem;
+	height: 2.6rem;
+	text-align: center;
+	line-height: 2.6rem;
+	font-size: 1.4rem;
+	display: inline-block;
+	color: #111;
+	background: #fff;
+	margin:0 0.5rem;
+	transition: 0.5s;
+	color: #111;
+	cursor: pointer;
+}
+.container .card .contentBx .size span:hover
+{
+	background: #F5C050;
+	border-radius: 50%;
+}
+.container .card .contentBx .color span
+{
+	width: 2rem;
+	height: 2rem;
+	background: #ff0;
+	border-radius: 50%;
+	margin: 0 0.5rem;
+	cursor: pointer;
+}
+.container .card .contentBx .color span:nth-child(2)
+{
+	background: #9bdc28;
+}
+.container .card .contentBx .color span:nth-child(3)
+{
+	background: #03a9fa;
+}
+.container .card .contentBx .color span:nth-child(4)
+{
+	background: #e91e63;
+}
+.container .card .contentBx a
+{
+	display: inline-block;
+	padding: 1rem 2rem;
+	background: #fff;
+	border-radius: 0.4rem;
+	margin-top: 1rem;
+	text-decoration: none;
+	font-weight: 600;
+	color: #111;
+	opacity: 0;
+	transform: translateY(5rem);
+	transition: 0.5s;
+}
+.container .card:hover .contentBx a
+{
+    opacity: 1;
+	transform: translateY(0rem);
+	transition-delay: 0.75s;
+}
+
+
+
+
+@media(max-width:998px){
+	html{
+	font-size: 55%;
+	}
+}
+
+@media(max-width:768px){
+	html{
+	font-size: 45%;
+	}
+}

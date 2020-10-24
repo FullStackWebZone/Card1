@@ -1,0 +1,181 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+@media (max-width: 900px) {
+  html, body {
+    font-size: 50%;
+  }
+}
+
+body {
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F7F7FF), to(#BDD6DD));
+  background: linear-gradient(#F7F7FF, #BDD6DD);
+}
+
+.demo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40.5rem;
+  height: 60rem;
+  margin-left: -20.25rem;
+  margin-top: -30rem;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rotateReverse 2s infinite linear;
+          animation: rotateReverse 2s infinite linear;
+}
+
+.demo__content {
+  position: relative;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rotate 2s infinite linear;
+          animation: rotate 2s infinite linear;
+  -webkit-transform: rotateX(10deg) rotateZ(0);
+          transform: rotateX(10deg) rotateZ(0);
+  background: #fff;
+}
+
+.demo__content:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.4);
+}
+
+.demo__img {
+  overflow: hidden;
+  position: absolute;
+  left: -0.55rem;
+  top: 3.15rem;
+  width: 41.6rem;
+  height: 53.7rem;
+  -webkit-transform: translateZ(5rem) scale(0.95);
+          transform: translateZ(5rem) scale(0.95);
+}
+
+.demo__img:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/macbeth.png");
+  background-size: cover;
+}
+
+.demo__img:after {
+  content: "";
+  z-index: 2;
+  overflow: hidden;
+  position: absolute;
+  left: -20%;
+  top: 0;
+  width: 80%;
+  padding-bottom: 80%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse farthest-corner at center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-animation: shiny 2s infinite ease-in-out;
+          animation: shiny 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateX(10deg) rotateZ(360deg);
+            transform: rotateX(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateX(10deg) rotateZ(360deg);
+            transform: rotateX(10deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes rotateReverse {
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
+  }
+}
+
+@-webkit-keyframes shiny {
+  25% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  50% {
+    -webkit-transform: translateY(60rem);
+            transform: translateY(60rem);
+  }
+  50.1% {
+    -webkit-transform: translate(75%, 60rem);
+            transform: translate(75%, 60rem);
+  }
+  75% {
+    -webkit-transform: translate(75%, -100%);
+            transform: translate(75%, -100%);
+  }
+}
+
+@keyframes shiny {
+  25% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  50% {
+    -webkit-transform: translateY(60rem);
+            transform: translateY(60rem);
+  }
+  50.1% {
+    -webkit-transform: translate(75%, 60rem);
+            transform: translate(75%, 60rem);
+  }
+  75% {
+    -webkit-transform: translate(75%, -100%);
+            transform: translate(75%, -100%);
+  }
+}
+
+.source {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.tip {
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+/*# sourceMappingURL=style.css.map */
